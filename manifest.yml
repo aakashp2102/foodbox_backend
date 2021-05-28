@@ -1,0 +1,11 @@
+applications:
+- name: foodbox
+  disk_quota: 2G
+  stack: cflinuxfs3
+  instances: 1
+  memory: 4G
+  routes:
+    - route : foodbox-route1.cfapps.io
+  path: target\foodbox-0.0.1-SNAPSHOT.jar
+  services:
+    - mysqldb
